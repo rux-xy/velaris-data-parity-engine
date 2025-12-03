@@ -1,3 +1,4 @@
+
 # 📊 Velaris Data Parity Engine
 
 ### **Automated Data Quality Validation for Velaris Integrations**
@@ -66,33 +67,33 @@ From `/data/<object>/...` (Bookings, Opportunities, Subscriptions)
 From `/data/mappings/*.json`
 These define:
 
-- Velaris field ↔ Salesforce field mappings
-- Data type rules
-- Required fields
-- Keys for merging
+* Velaris field ↔ Salesforce field mappings
+* Data type rules
+* Required fields
+* Keys for merging
 
 ### ✔ Runs parity checks
 
 The validators detect:
 
-- Missing records
-- Mismatched values
-- Duplicate keys
-- Unexpected schema changes
-- Fields with null/empty anomalies
+* Missing records
+* Mismatched values
+* Duplicate keys
+* Unexpected schema changes
+* Fields with null/empty anomalies
 
 ### ✔ Saves results
 
 Results are stored in `/output/<object>/...` as:
 
-- mismatch reports
-- missing record lists
-- summary logs
+* mismatch reports
+* missing record lists
+* summary logs
 
 ### ✔ Supports batch or multi-file validation
 
-- `batch_runner.py` → run validator for one dataset
-- `multi_validator.py` → validate Bookings, Opportunities, Subscriptions in one go
+* `batch_runner.py` → run validator for one dataset
+* `multi_validator.py` → validate Bookings, Opportunities, Subscriptions in one go
 
 ---
 
@@ -114,11 +115,11 @@ Record-level join using a configured primary key.
 
 Validator checks:
 
-- Null values
-- Type mismatches
-- Field mismatches
-- Missing Salesforce → Velaris records
-- Extra Velaris records
+* Null values
+* Type mismatches
+* Field mismatches
+* Missing Salesforce → Velaris records
+* Extra Velaris records
 
 ### **5. Output Reports**
 
@@ -154,10 +155,10 @@ python src/validators/multi_validator.py
 
 Define:
 
-- Column mappings
-- Key fields
-- Ignore lists
-- Tolerance rules
+* Column mappings
+* Key fields
+* Ignore lists
+* Tolerance rules
 
 Example:
 
@@ -189,10 +190,10 @@ For each object (bookings, opportunities, subscriptions), the tool generates:
 
 You can deploy this on AWS via:
 
-- **Lambda** (for small datasets)
-- **EC2** (cron-based execution)
-- **ECS/Fargate** (production-ready)
-- **S3 input + EventBridge** (serverless scheduled validation)
+* **Lambda** (for small datasets)
+* **EC2** (cron-based execution)
+* **ECS/Fargate** (production-ready)
+* **S3 input + EventBridge** (serverless scheduled validation)
 
 ---
 
@@ -202,3 +203,5 @@ You can deploy this on AWS via:
 Velaris Data Quality Project
 
 ---
+
+
